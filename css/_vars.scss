@@ -1,0 +1,27 @@
+$contentWidth: 1425px;
+$primary-red: #ed1b23;
+$primary-black: #333;
+
+.col-red {
+    color: $primary-red !important;
+
+    * {
+        color: $primary-red;
+    }
+}
+
+.bg-red {
+    background-color: $primary-red;
+}
+
+.col-dark {
+    color: $primary-black !important;
+
+    * {
+        color: $primary-black;
+    }
+}
+
+.bg-dark {
+    background-color: $primary-black;
+}

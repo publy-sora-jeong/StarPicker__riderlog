@@ -1,0 +1,208 @@
+footer {
+    background: #23272a;
+    padding: 40px 2%;
+
+    .container {
+        width: 1425px;
+        @include push--auto;
+        display: flex;
+        position: relative;
+        //justify-content: space-between;
+
+        .logo {
+            .logo-rider {
+                margin-left: 20px;
+            }
+        }
+
+        .footer-contact {
+            padding-left: 50px;
+
+            a {
+                color: #9b9d9f;
+            }
+
+            .policy {
+                letter-spacing: -10px;
+                padding-top: 6px;
+                position: relative;
+
+                li {
+                    display: inline-block;
+                    letter-spacing: -1px;
+
+                    &.youtube {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: 15px;
+                        padding-left: 35px;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                            width: 30px;
+                            height: 21px;
+                            background: url("../img/ico_youtube.png") no-repeat;
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 17px;
+                    padding-right: 45px;
+                    display: block;
+                }
+            }
+
+            .contact {
+                margin-top: 15px;
+                font-size: 15px;
+
+                li {
+                    display: inline-block;
+                    color: #9b9b9b;
+                    margin-right: 15px;
+                }
+            }
+
+            .copyrights {
+                color: #9b9b9b;
+                font-size: 15px;
+                letter-spacing: 0;
+            }
+        }
+
+        .btn-top {
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            background: url("../img/btn_up.png") no-repeat;
+            background-size: contain;
+            width: 137px;
+            height: 107px;
+        }
+    }
+}
+
+@include mq("contents") {
+
+
+    footer {
+        padding-top: 20px;
+
+        .container {
+            width: 100%;
+            flex-wrap: wrap;
+
+            .policy li.youtube {
+                //top: -60px !important;
+            }
+
+            .logo {
+                width: 100%;
+            }
+
+            .footer-contact {
+                padding-left: 0;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mq("tablet-wide") {
+    footer .container .footer-contact {
+        padding-right: 140px;
+
+        .policy {
+            a {
+                font-size: 16px;
+                padding-right: 20px;
+            }
+
+            li.youtube {
+                top: -60px;
+                right: 0-150px;
+            }
+        }
+
+        .contact,
+        .copyrights {
+            font-size: 14px;
+        }
+    }
+}
+
+@include mq('tablet-small') {
+    footer .container {
+        .btn-top {
+            width: 97px;
+            height: 76px;
+        }
+
+        .logo {
+            img {
+                height: 30px;
+            }
+        }
+
+        .footer-contact {
+            padding-right: 100px;
+
+            .policy {
+                a {
+                    font-size: 14px;
+                    padding-right: 10px;
+                }
+
+                li.youtube {
+                    top: -40px;
+                    right: 0;
+                    vertical-align: middle;
+
+                    &::before {
+                        top: 0;
+                    }
+
+                    a {
+                        height: 21px;
+                        display: inline-block;
+                        line-height: 21px;
+                    }
+                }
+            }
+
+            .contact,
+            .copyrights {
+                font-size: 12px;
+            }
+        }
+    }
+
+    #main footer {
+        padding-bottom: 40px;
+    }
+}
+
+@include mq("phone") {
+    footer {
+        padding-bottom: 0;
+
+        .container {
+            padding-bottom: 80px;
+
+            .footer-contact {
+                padding: 0;
+            }
+
+            .btn-top {
+                bottom: 0;
+            }
+        }
+    }
+}

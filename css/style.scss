@@ -1,0 +1,29 @@
+// @import "vendor/fullpage.css";
+// @import "vendor/aos.css";
+// @import "vendor/swiper.css"; 
+
+@import url(vendor/fullpage.css);
+@import url(vendor/aos.css);
+@import url(vendor/swiper.css);
+
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "mixin";
+@import "common";
+@import "animation";
+
+
+
+@import "header";
+@import "footer";
+@import "mHeader";
+
+
+@import "main";
+@import "sub";
+
+@import "contents";
+@import "board";
+
+
